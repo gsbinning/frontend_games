@@ -1,17 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 function Header() {
   return (
-      <div>
-          <header>
-              <h1>
-                  hello world!
-              </h1>
-          </header>
-      </div>
-  
-    
+    <header><h1>
+        Board Games Entertainment
+        </h1></header>
   )
 }
 
-export default Header
+export default Header;

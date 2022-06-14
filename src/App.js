@@ -1,24 +1,19 @@
-import './App.css';
-
 import React from "react";
 import "./App.css";
 import Header from "./Components/Header";
-import Home from "./Components/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-
+import ReviewsList from "./Components/ReviewsList";
+import Nav from "./Components/Nav";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-
-
   return (
-    <Router>
-      <div className="app">
+      <div className="App">
+        <Header />
+        <Nav />
         <Routes>
-          <Route path="/" element={[<Header />, <Home />]} />
+          <Route path="/reviews" element={<ReviewsList />} />
         </Routes>
       </div>
-    </Router>
   );
 }
 
