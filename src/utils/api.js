@@ -4,8 +4,23 @@ const gamesAPI = axios.create({
   baseURL: "https://gugz-games.herokuapp.com/api",
 });
 
-export const fetchReviews = () => {
-  return gamesAPI.get("/reviews").then(({ data }) => {
-    return data.reviews;
+export const fetchReviews = (category) => {
+  return gamesAPI
+    .get("/reviews", {
+      params: { category },
+    }).then(({ data }) => {
+      return data.reviews;
+    });
+};
+
+export const fetchCategories = () => {
+  return gamesAPI.get("/categories").then(({ data }) => {
+    return data.categories;
+  });
+};
+
+export const fetchReviewsById = (review_id) => {
+  return gamesAPI.get(`/reviews/${review_id}`).then(({ data }) => {
+    return data.review;
   });
 };
