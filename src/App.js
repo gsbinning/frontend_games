@@ -1,11 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Nav from "./components/Nav";
-import Reviews from "./components/Reviews";
-import Categories from "./components/Categories";
+import Header from "./Components/Header";
+import Nav from "./Components/Nav";
+import Reviews from "./Components/Reviews";
+import Categories from "./Components/Categories";
 //import ReviewsFiltered from "./components/ReviewsFiltered";
 //import dataLoop from "./components/video/dataLoop.mp4";
+import SingleReview from "./Components/SingleReview";
 
 function App() {
   return (
@@ -34,13 +35,10 @@ function App() {
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/:category" element={<Reviews />} />
+        <Route path="/reviews/:review_id" element={<SingleReview />} />
       </Routes>
     </div>
   );
 }
 
 export default App;
-
-
-
-
