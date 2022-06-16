@@ -2,19 +2,23 @@ import { useState, useEffect } from "react";
 import { fetchReviews } from "../utils/api";
 import ReviewCard from "./ReviewCard";
 import MenuDropDown from "./MenuDropDown";
+import { useParams } from "react-router-dom";
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);
-
   const [isLoading, setIsLoading] = useState(true);
-
+  const { category } = useParams();
   const [userSelection, setUserSelection] = useState("");
+ 
   
   useEffect(() => {
+      console.log(userSelection)
     fetchReviews(userSelection).then((reviewsFromAPI) => {
+        console.log(reviewsFromAPI);
       setReviews(reviewsFromAPI);
       setIsLoading(false);
     });
+
   }, [userSelection]);
 
   if (isLoading) return <p>... loading</p>;
@@ -29,6 +33,7 @@ function Reviews() {
       </ul>
     </main>
   );
+
 }
 
 export default Reviews;

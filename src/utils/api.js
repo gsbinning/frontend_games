@@ -5,10 +5,13 @@ const gamesAPI = axios.create({
 });
 
 export const fetchReviews = (category) => {
-  return gamesAPI
-    .get("/reviews", {
-      params: { category },
-    }).then(({ data }) => {
+  console.log(category); 
+  let queryString = "/reviews"
+  if (category) queryString+= `?category=${category}`
+  return gamesAPI.get(queryString) 
+  
+     
+    .then(({ data }) => {
       return data.reviews;
     });
 };

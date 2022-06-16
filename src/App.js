@@ -4,13 +4,13 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Reviews from "./components/Reviews";
 import Categories from "./components/Categories";
-import ReviewsFiltered from "./components/ReviewsFiltered";
-import dataLoop from "./components/video/dataLoop.mp4";
+//import ReviewsFiltered from "./components/ReviewsFiltered";
+//import dataLoop from "./components/video/dataLoop.mp4";
 
 function App() {
   return (
     <div className="App">
-      <video
+      {/* <video
         autoPlay
         loop
         muted
@@ -26,14 +26,14 @@ function App() {
         }}
       >
         <source src={dataLoop} type="video/mp4" />
-      </video>
+      </video> */}
       <Header />
       <Nav />
       <Routes>
         <Route path="/" element={<Reviews />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/categories" element={<Categories />} />
-        <Route path="/categories/:category" element={<ReviewsFiltered />} />
+        <Route path="/categories/:category" element={<Reviews />} />
       </Routes>
     </div>
   );
