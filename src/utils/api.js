@@ -27,3 +27,11 @@ export const fetchReviewsById = (review_id) => {
     return data.review;
   });
 };
+
+export const patchVotes = (review_id, inc_votes) => {
+  return gamesAPI
+    .patch(`/reviews/${review_id}`, { inc_votes: inc_votes })
+    .then(({ data }) => {
+      return data.review;
+    });
+};
