@@ -1,0 +1,14 @@
+.review-img{
+    height: 15px;
+    width: 15px;
+}
+
+.review-card{
+    height: 10px;
+    display: flex;
+}
+
+.img-list{
+    height: 10px;
+    display: flex;
+}

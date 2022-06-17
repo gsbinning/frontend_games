@@ -1,8 +1,7 @@
 .header {
-    height: 20px;
-    display: flex;
+    height: 100px;
     align-items: center;
-    background-color:#ffffff;
+    background-color:#000000;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -11,13 +10,15 @@
 .header__nav {
     display: flex;
     justify-content: space-evenly;
+    font-size: 15px;
+
 
 }
 
 
 .header__optionLineOne {
+    
     font-size: 10
-    px;
     
 }
 
@@ -37,6 +38,7 @@
 
 }
 
-.title {
-  
-  }
+.title{
+    color: aliceblue;
+    align-items: center;
+}
