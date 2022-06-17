@@ -3,6 +3,7 @@ import { fetchReviews } from "../utils/api";
 import ReviewCard from "./ReviewCard";
 import MenuDropDown from "./MenuDropDown";
 import { useParams } from "react-router-dom";
+import Styling from "./Styling.css"
 
 function Reviews() {
   const [reviews, setReviews] = useState([]);

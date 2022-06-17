@@ -1,31 +1,25 @@
-import React from 'react';
-import "../Styles/Header.css"
+import React from "react";
+import "../Styles/Header.css";
 import { Link } from "react-router-dom";
+import Styling from "./Styling.css"
 
 function Header() {
   return (
-      <div className='header'>
-    <header>
-        <h1 className='title'>Board Games Entertainment</h1></header>
+    <div className="header">
+      <header>
+        <h1 className="title">Board Games Entertainment</h1>
+      </header>
 
-    <div className='header__nav'>
-        <Link to="/login">
-            <div className="header__option" >
+      <div className="header__nav">
+        <Link to="/reviews">
+          <div className="header__option">
             {/* <span className="header__optionLineOne">Hello Guest</span> */}
             {/* <span className="header__optionLineTwo">Sign In</span> */}
-            </div>
+          </div>
         </Link>
-
-
+      </div>
     </div>
-        </div>
-
-
-
-        
-
-
-)
+  );
 }
 
 export default Header;

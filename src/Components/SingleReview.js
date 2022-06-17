@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { fetchReviewsById } from "../utils/api";
 import Votes from "./Votes";
+import { patchVotes } from "../utils/api";
+
 
 function SingleReview() {
   const [review, setReview] = useState({});
@@ -18,7 +20,12 @@ function SingleReview() {
 
   function handleVote() {
     setNewVotes((currentNewVotes) => currentNewVotes + 1);
-    
+    patchVotes(review_id, 1).then((res)=> {
+    console.log(res)
+    return res;
+      
+    });
+
   } 
 
   if (isLoading) return <p>... loading</p>;
